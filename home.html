@@ -1,0 +1,366 @@
+
+<html>
+<head>
+<title>HTML.5</title>
+<style type='text/css'>
+header{
+height:20%;
+width:100%;
+}
+
+#left{
+height:70%;
+width:25%;
+background-color:black;
+float:left;
+}
+#right{
+height:70%;
+width:25%;
+background-color:black;
+float:right;
+}
+#content{
+height:70%;
+width:50%;
+background-color:black;
+float:left;
+}
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
+html, body { background: black url("http://codepen.io/images/classy_fabric.png"); }
+
+.slides {
+    padding: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    position: absolute;
+
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+	  opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: white;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+	width: 100%;
+	bottom: 9px;
+	height: 11px;
+	display: block;
+	position: absolute;
+	text-align: center;
+        color:red;
+}
+
+.nav-dots .nav-dot {
+
+	top: -5px;
+	width: 11px;
+	height: 11px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+	background: rgba(0, 0, 0, 0.8);
+}
+/*setup*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+}
+
+@font-face {
+  font-family:'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url(http://themes.googleusercontent.com/static/fonts/pacifico/v5/yunJt0R8tCvMyj_V4xSjafesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+}
+
+body {
+  background-color: black;
+  background: repeating-linear-gradient(45deg, black 0%, black 10%, black 0%, black 50%) 0 / 15px 15px;
+}
+
+#container {
+  width: 800px;
+  margin: auto;
+}
+/*neeeeoooon*/
+
+p {
+  text-align: center;
+  font-size: 4em;
+  margin: 20px 0 20px 0;
+}
+
+p {
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+
+
+p  {
+  color: white;
+  font-family: Pacifico;
+}
+
+p:hover {
+  -webkit-animation: neon3 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon3 1.5s ease-in-out infinite alternate;
+  animation: neon3 1.5s ease-in-out infinite alternate;
+}
+
+
+p :hover {
+  color: #ffffff;
+}
+/*glow for webkit*/
+
+
+
+@-webkit-keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00FFFF, 0 0 70px #00FFFF, 0 0 80px #00FFFF, 0 0 100px #00FFFF, 0 0 150px #00FFFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00FFFF, 0 0 35px #00FFFF, 0 0 40px #00FFFF, 0 0 50px #00FFFF, 0 0 75px #00FFFF;
+  }
+}
+
+
+/*glow for mozilla*/
+
+
+
+@-moz-keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00FFFF, 0 0 70px #00FFFF, 0 0 80px #00FFFF, 0 0 100px #00FFFF, 0 0 150px #00FFFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00FFFF, 0 0 35px #00FFFF, 0 0 40px #00FFFF, 0 0 50px #00FFFF, 0 0 75px #00FFFF;
+  }
+}
+
+
+/*glow*/
+
+@keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00FFFF, 0 0 70px #00FFFF, 0 0 80px #00FFFF, 0 0 100px #00FFFF, 0 0 150px #00FFFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00FFFF, 0 0 35px #00FFFF, 0 0 40px #00FFFF, 0 0 50px #00FFFF, 0 0 75px #00FFFF;
+  }
+}
+
+
+/*REEEEEEEEEEESPONSIVE*/
+
+@media (max-width: 650px) {
+  #container {
+    width: 100%;
+  }
+  p {
+    font-size: 3.5em;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+<div id="container">
+
+  <p>
+    WOW(Websites of website)
+  </p>
+
+  
+
+</div>
+
+<div id="linkBack" style="position:absolute;right:0px;top:0px;background-color:#333;margin:0;width:60px;padding:5px"><a href="http://www.f-rilling.com/projects/" target="_blank" style="font-size:14px;text-decoration:none;color:#fff;padding:0 0 0 5px;font-family:sans-serif">My Site</a></div>
+</header>
+<br/>
+<br/>
+<div id='left'>
+<marquee behavior="scroll" direction="up"><table><tr><td><a href="entertainment.html"><img src="es.jpg" width="100%" height="200px" alt="Natural" /></a></td></tr>
+<tr><td><a href="transport.html"><img src="w6.jpg" width="100%" height="200px" alt="Natural" /></a></td></tr>
+<tr><td><a href="health.html"><img src="h1s.jpg" width="100%" height="200px" alt="Natural" /></a></td></tr>
+</table>
+</marquee>
+</div>
+</div>
+<div id='right'>
+<marquee behavior="scroll" direction="down"><table><tr><td><a href="food.html"><img src="fs.jpg" width="100%" height="200px" alt="Natural" /></a></td></tr>
+<tr><td><a href="socialmedia.html"><img src="w8.jpg" width="100%" height="200px" alt="Natural" /></a></td></tr>
+<tr><td><a href="education.html"><img src="w1.jpg" width="100%" height="200px" alt="Natural" /></a></td></tr>
+</table>
+</marquee>
+</div>
+<div id='content'>
+<ul class="slides">
+    <input type="radio" name="radio-btn" id="img-1" checked />
+    <li class="slide-container">
+		<div class="slide">
+			<a href="entertainment.html"><img src="e1.jpg"  height="100%" width="100%"/></a>
+        </div>
+		<div class="nav">
+			<label for="img-6" class="prev">&#x2039;</label>
+			<label for="img-2" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-2" />
+    <li class="slide-container">
+        <div class="slide">
+         <a href="transport.html"><img src="t2m.jpg" /></a>
+        </div>
+		<div class="nav">
+			<label for="img-1" class="prev">&#x2039;</label>
+			<label for="img-3" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-3" />
+    <li class="slide-container">
+        <div class="slide">
+          <a href="health.html"><img src="hm.jpg" /></a>
+        </div>
+		<div class="nav">
+			<label for="img-2" class="prev">&#x2039;</label>
+			<label for="img-4" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-4" />
+    <li class="slide-container">
+        <div class="slide">
+          <a href="education.html"><img src="edm.jpg" /></a>
+        </div>
+		<div class="nav">
+			<label for="img-3" class="prev">&#x2039;</label>
+			<label for="img-5" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-5" />
+    <li class="slide-container">
+        <div class="slide">
+          <a href="food.html"><img src="w9.jpg" /></a>
+        </div>
+		<div class="nav">
+			<label for="img-4" class="prev">&#x2039;</label>
+			<label for="img-6" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-6" />
+    <li class="slide-container">
+        <div class="slide">
+          <a href="socialmedia.html"><img src="sm.jpg" /></a>
+        </div>
+		<div class="nav">
+			<label for="img-5" class="prev">&#x2039;</label>
+			<label for="img-1" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <li class="nav-dots">
+      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+      <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+      <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+      <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+      <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+    </li>
+</ul>
+
+
+</div>
+</body>
+</html>
